@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.Input;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class PlayerMovement : MonoBehaviour
     private float speed = 1f;
     public Rigidbody2D rb;
     Vector2 move;
+
+    public PlayerInputs ctrl;
 
     void Start()
     {
