@@ -1,48 +1,30 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿
 using UnityEngine;
-using UnityEngine.Experimental.Input;
+using UnityEngine.InputSystem;
+
 
 public class PlayerMovement : MonoBehaviour
 {
+    private Rigidbody2D rb;
+    private float playerSpeed = 40.0f;
+    private Vector2 moveInput = Vector2.zero;
 
-    private float speed = 1f;
-    public Rigidbody2D rb;
-    Vector2 move;
-
-    public PlayerInputs ctrl;
-
-    void Start()
+    private void Start()
     {
-        rb = GetComponent<Rigidbody2D> ();
+        rb = gameObject.GetComponent<Rigidbody2D>();
+    }
+
+    public void Move(InputAction.CallbackContext context){
+
+        moveInput = context.ReadValue<Vector2>();
+
     }
 
     void Update()
     {
-        move.x = Input.GetAxisRaw("Horizontal");
-        move.y = Input.GetAxisRaw("Vertical");
 
-        if(Input.GetKey("left shift"))
-        {
-            speed = 10f;
-        }
-        else
-        {
-            speed = 3f;
-        }
-
-        if(move.x != 0 && move.y != 0){
-            speed = speed - 0.5f;
-        }
-    }
-
-    void FixedUpdate()
-    {
-        rb.MovePosition(rb.position + move * speed * Time.deltaTime);
+        Vector2 move = new Vector2(moveInput.x, moveInput.y);
+        rb.MovePosition(rb.position + move * playerSpeed * Time.deltaTime);
 
     }
-
-
-
-
 }
