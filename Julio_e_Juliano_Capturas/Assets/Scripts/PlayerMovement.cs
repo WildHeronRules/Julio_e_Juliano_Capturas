@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     private float playerSpeed = 40.0f;
     private Vector2 moveInput = Vector2.zero;
+    private bool Interaction = false;
 
     private void Start()
     {
@@ -18,6 +19,12 @@ public class PlayerMovement : MonoBehaviour
 
         moveInput = context.ReadValue<Vector2>();
 
+    }
+
+    public void Interact(InputAction.CallbackContext context)
+    {
+        Interaction = context.ReadValue<bool>();
+        Interaction = context.action.triggered;
     }
 
     void Update()
