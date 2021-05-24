@@ -2,16 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EstilingueInv : MonoBehaviour
+public class EstilingueChao : MonoBehaviour
 {
-
-    private MunicaoInv MncInv;
-    public GameObject Pedra;
-
     // Start is called before the first frame update
     void Start()
     {
-        MncInv = GameObject.Find("Player").GetComponent<MunicaoInv>();
+        
     }
 
     // Update is called once per frame
@@ -20,8 +16,12 @@ public class EstilingueInv : MonoBehaviour
         
     }
 
-    void DispararPedra()
+    void OnTriggerEnter2D(Collider2D player)
     {
-
+        if (player.gameObject.tag == "Player")
+        {
+            Destroy(this.gameObject);
+        }
     }
+
 }

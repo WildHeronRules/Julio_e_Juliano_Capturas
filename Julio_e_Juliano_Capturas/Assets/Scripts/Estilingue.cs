@@ -16,12 +16,4 @@ public class Estilingue : MonoBehaviour
         
     }
 
-    void OnTriggerEnter2D(Collider2D player)
-    {
-        if (player.gameObject.tag == "Player")
-        {
-            Destroy(this.gameObject);
-        }
-    }
-
 }

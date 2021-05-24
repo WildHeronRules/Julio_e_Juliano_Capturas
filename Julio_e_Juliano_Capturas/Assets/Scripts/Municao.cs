@@ -5,6 +5,8 @@ using UnityEngine;
 public class Municao : MonoBehaviour
 {
 
+    public GameObject Jogador;
+
     // Start is called before the first frame update
     void Start()
     {
