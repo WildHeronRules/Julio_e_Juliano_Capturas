@@ -57,7 +57,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5742135910173267792, guid: 8fdabbf0b122a0240878ad396e2a997d, type: 3}
       propertyPath: m_DefaultControlScheme
-      value: Keyboard 2
+      value: Gamepad
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8fdabbf0b122a0240878ad396e2a997d, type: 3}

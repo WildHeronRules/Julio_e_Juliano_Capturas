@@ -13,8 +13,7 @@ GameObject:
   - component: {fileID: 7598817384616021992}
   - component: {fileID: 5742135910173267792}
   - component: {fileID: 8566375584585272097}
-  - component: {fileID: 1726513335778713915}
-  - component: {fileID: 948351100514669286}
+  - component: {fileID: 8988251259859080075}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -182,7 +181,7 @@ MonoBehaviour:
     m_ActionId: cfa4e232-29e7-4094-aed2-82619cbe7050
     m_ActionName: Player/Interact[/Keyboard/e]
   m_NeverAutoSwitchControlSchemes: 1
-  m_DefaultControlScheme: Keyboard&Mouse
+  m_DefaultControlScheme: Keyboard
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
@@ -198,7 +197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21d7ab1bcd18ef142934f82ac76ae15d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1726513335778713915
+--- !u!114 &8988251259859080075
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -207,24 +206,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2440427733045967965}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8367f9fcab0988c4a892474bda45d79e, type: 3}
+  m_Script: {fileID: 11500000, guid: 899f0ccc5ef433048b77342c1999253d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Pedra: {fileID: 0}
---- !u!114 &948351100514669286
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2440427733045967965}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df8ace80fb47ec1479db0f0d909cfd2d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  quantidade: 0
-  speed: 5
 --- !u!1 &6175134691376691607
 GameObject:
   m_ObjectHideFlags: 0
