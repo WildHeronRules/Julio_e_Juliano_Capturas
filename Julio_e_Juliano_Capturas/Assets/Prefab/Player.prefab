@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5742135910173267792}
   - component: {fileID: 8566375584585272097}
   - component: {fileID: 8988251259859080075}
+  - component: {fileID: 8426414874323972182}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -168,6 +169,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 97991f1b-0ce8-4a3b-8d1d-cc1f04819a06
     m_ActionName: Player/Interact[/Keyboard/e]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 57fd2830-3c11-4ac3-892f-c4d01e8bb87b
+    m_ActionName: Player/Shoot[/Keyboard/rightArrow,/Keyboard/leftArrow,/Keyboard/upArrow,/Keyboard/downArrow]
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: Keyboard
   m_DefaultActionMap: Player
@@ -200,6 +205,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pick: 0
   Interaction: 0
+--- !u!114 &8426414874323972182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2440427733045967965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 711c8d5fedad5c24b9ede36eb0d15938, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pedra: {fileID: 9077968420656375558, guid: a69cebb2862f81e48a999b3019082209, type: 3}
 --- !u!1 &6175134691376691607
 GameObject:
   m_ObjectHideFlags: 0
