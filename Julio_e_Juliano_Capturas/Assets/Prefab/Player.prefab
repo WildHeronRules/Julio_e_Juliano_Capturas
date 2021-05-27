@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 8988251259859080075}
   m_Layer: 8
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -165,20 +165,8 @@ MonoBehaviour:
     m_ActionId: a57a6372-2d8b-4a9e-a7f2-90a87df6aa7b
     m_ActionName: UI/TrackedDeviceOrientation
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8566375584585272097}
-        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
-        m_MethodName: Interact
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: cfa4e232-29e7-4094-aed2-82619cbe7050
+      m_Calls: []
+    m_ActionId: 97991f1b-0ce8-4a3b-8d1d-cc1f04819a06
     m_ActionName: Player/Interact[/Keyboard/e]
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: Keyboard
@@ -197,6 +185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21d7ab1bcd18ef142934f82ac76ae15d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerSpeed: 5
 --- !u!114 &8988251259859080075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -209,6 +198,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 899f0ccc5ef433048b77342c1999253d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pick: 0
+  Interaction: 0
 --- !u!1 &6175134691376691607
 GameObject:
   m_ObjectHideFlags: 0

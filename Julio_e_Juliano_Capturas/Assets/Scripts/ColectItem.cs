@@ -6,40 +6,63 @@ using UnityEngine.InputSystem;
 public class ColectItem : MonoBehaviour
 {
 
+
+    private PlayerInputs m_input;
+
     [SerializeField]
     private bool pick;
+    [SerializeField]
     private bool Interaction = false;
 
 
-    public void Interact(InputAction.CallbackContext context)
-    {
-        Interaction = context.ReadValue<bool>();
-        Interaction = context.action.triggered;
+    private void Awake(){
+
+        m_input = new PlayerInputs();
+
+        m_input.Player.Interact.performed += ctx => InteractDone();
+        m_input.Player.Interact.canceled += ctx => InteractFinish();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
+    public void InteractDone(){
+        Interaction = true;
+    }
+
+    public void InteractFinish(){
+        Interaction = false;
+    }
+
+    private void OnEnable(){
+
+        m_input.Enable();
+
+    }
+
+    private void OnDisable(){
+       
+        m_input.Disable();
+
+    }
+
+    private void Update(){
         if(pick && Interaction){
 
-            PickItem();
+            Destroy(gameObject);
         }
     }
 
     private void OnTriggerEnter2D(Collider2D col){
-        if(col.gameObject.tag.Equals("Item")){
+        if(col.gameObject.tag.Equals("Player")){
             pick = true;
         }
+
     }
 
     private void OnTriggerExit2D(Collider2D col){
-        if(col.gameObject.tag.Equals("Item")){
+        if(col.gameObject.tag.Equals("Player")){
             pick = false;
         }
     }
 
-    private void PickItem(){
-        Destroy (gameObject);
-    }
+
 
 }
