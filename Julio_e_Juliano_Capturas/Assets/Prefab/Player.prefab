@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 8566375584585272097}
   - component: {fileID: 8988251259859080075}
   - component: {fileID: 8426414874323972182}
+  - component: {fileID: 5578327778534302654}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -218,6 +219,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pedra: {fileID: 9077968420656375558, guid: a69cebb2862f81e48a999b3019082209, type: 3}
+--- !u!114 &5578327778534302654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2440427733045967965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 899f0ccc5ef433048b77342c1999253d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pick: 0
+  Interaction: 0
 --- !u!1 &6175134691376691607
 GameObject:
   m_ObjectHideFlags: 0

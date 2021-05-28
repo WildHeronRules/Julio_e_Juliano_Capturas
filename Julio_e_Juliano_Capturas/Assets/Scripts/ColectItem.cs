@@ -14,6 +14,9 @@ public class ColectItem : MonoBehaviour
     [SerializeField]
     private bool Interaction = false;
 
+    [SerializeField]
+    private bool destruct = false;
+
 
     private void Awake(){
 
@@ -46,19 +49,31 @@ public class ColectItem : MonoBehaviour
     private void Update(){
         if(pick && Interaction){
 
-            Destroy(gameObject);
+            destruct = true;
         }
     }
 
     private void OnTriggerEnter2D(Collider2D col){
-        if(col.gameObject.tag.Equals("Player")){
+
+        
+        if(col.gameObject.tag.Equals("Item")){
             pick = true;
+        }
+
+
+    }
+
+    private void OnTriggerStay2D(Collider2D col){
+
+        if(destruct){
+            Destroy(col.gameObject);
+            destruct = false;
         }
 
     }
 
     private void OnTriggerExit2D(Collider2D col){
-        if(col.gameObject.tag.Equals("Player")){
+        if(col.gameObject.tag.Equals("Item")){
             pick = false;
         }
     }

@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 9218051436618195885}
   - component: {fileID: 7890941626670641732}
   - component: {fileID: 7941630670151545892}
-  - component: {fileID: 5811834140022379877}
   m_Layer: 0
   m_Name: PEDRA
   m_TagString: Item
@@ -110,17 +109,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5, y: 2.81}
   m_EdgeRadius: 0
---- !u!114 &5811834140022379877
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1704686071117759326}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 899f0ccc5ef433048b77342c1999253d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pick: 0
-  Interaction: 0

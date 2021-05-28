@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 2136164365217624002}
   - component: {fileID: 1774192539554475369}
   - component: {fileID: 5164055796560778410}
-  - component: {fileID: 8693333513747929966}
   m_Layer: 0
   m_Name: Estilingue
   m_TagString: Item
@@ -110,17 +109,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.44, y: 5.44}
   m_EdgeRadius: 0
---- !u!114 &8693333513747929966
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4379715210977448494}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 899f0ccc5ef433048b77342c1999253d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pick: 0
-  Interaction: 0
