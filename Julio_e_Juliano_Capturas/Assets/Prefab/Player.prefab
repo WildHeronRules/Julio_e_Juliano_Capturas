@@ -28,7 +28,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2440427733045967964}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2440427733045967965
 GameObject:
@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 8566375584585272097}
   - component: {fileID: 8426414874323972182}
   - component: {fileID: 5578327778534302654}
+  - component: {fileID: 7213597653598438474}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -63,7 +64,6 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 6175134691376691606}
   - {fileID: 6793941109580909972}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -105,10 +105,10 @@ BoxCollider2D:
   m_Offset: {x: -0.0079009235, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
@@ -204,6 +204,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 57fd2830-3c11-4ac3-892f-c4d01e8bb87b
     m_ActionName: Player/Shoot[/Keyboard/rightArrow,/Keyboard/leftArrow,/Keyboard/upArrow,/Keyboard/downArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 4b2704a4-4abc-4cab-8be4-48052326663b
+    m_ActionName: Player/Run[/Keyboard/leftShift]
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: Keyboard
   m_DefaultActionMap: Player
@@ -231,10 +235,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2440427733045967965}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 711c8d5fedad5c24b9ede36eb0d15938, type: 3}
+  m_Script: {fileID: 11500000, guid: 2dd6824f474792c40aff092616c33fbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pedra: {fileID: 9077968420656375558, guid: a69cebb2862f81e48a999b3019082209, type: 3}
+  Points: 0
+  Stamina: 100
 --- !u!114 &5578327778534302654
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -250,44 +255,13 @@ MonoBehaviour:
   pick: 0
   Interaction: 0
   destruct: 0
---- !u!1 &6175134691376691607
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6175134691376691606}
-  - component: {fileID: 6175134691376691605}
-  m_Layer: 8
-  m_Name: JulianoCadeMeuOvo
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6175134691376691606
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6175134691376691607}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2440427733045967964}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &6175134691376691605
+--- !u!212 &7213597653598438474
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6175134691376691607}
+  m_GameObject: {fileID: 2440427733045967965}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0

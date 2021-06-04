@@ -71,6 +71,7 @@ public class ColectItem : MonoBehaviour
 
             pick = true;
         }
+        
 
         void Destruction(){
             Destroy(col.gameObject);
