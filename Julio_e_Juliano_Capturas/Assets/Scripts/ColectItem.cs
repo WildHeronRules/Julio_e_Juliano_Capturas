@@ -17,9 +17,13 @@ public class ColectItem : MonoBehaviour
     [SerializeField]
     private bool destruct = false;
 
+    private PlayerCentral pCentral;
+
 
     private void Awake(){
 
+
+        pCentral = this.gameObject.GetComponent<PlayerCentral>();
         m_input = new PlayerInputs();
 
         m_input.Player.Interact.performed += ctx => InteractDone();
@@ -27,7 +31,10 @@ public class ColectItem : MonoBehaviour
     }
 
     public void InteractDone(){
+        if(pick == true){
         Interaction = true;
+        Invoke("InteractFinish", 0.3f);
+        }
     }
 
     public void InteractFinish(){
@@ -56,26 +63,64 @@ public class ColectItem : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D col){
 
         
-        if(col.gameObject.tag.Equals("Item")){
+        if(col.gameObject.tag.Equals("Item") || col.gameObject.tag.Equals("PItems")){
             pick = true;
         }
 
+        if(col.gameObject.tag.Equals("PItems")){
 
-    }
+            pick = true;
+        }
 
-    private void OnTriggerStay2D(Collider2D col){
-
-        if(destruct){
+        void Destruction(){
             Destroy(col.gameObject);
+        }
+
+        if(destruct && col.gameObject.tag.Equals("Item")){
+            Destruction();
+            destruct = false;
+        }
+
+        if(destruct && col.gameObject.tag.Equals("PItems")){
+            PointItems pts = col.gameObject.GetComponent<PointItems>();
+
+            pCentral.Points += pts.value;
+            
+            Destruction();
             destruct = false;
         }
 
     }
 
+    private void OnTriggerStay2D(Collider2D col){
+
+        void Destruction(){
+            Destroy(col.gameObject);
+        }
+
+        if(destruct && col.gameObject.tag.Equals("Item")){
+            Destruction();
+            destruct = false;
+        }
+
+        if(destruct && col.gameObject.tag.Equals("PItems")){
+            PointItems pts = col.gameObject.GetComponent<PointItems>();
+
+            pCentral.Points += pts.value;
+            
+            Destruction();
+            destruct = false;
+        }
+
+    }
+
+        
+
     private void OnTriggerExit2D(Collider2D col){
-        if(col.gameObject.tag.Equals("Item")){
+        if(col.gameObject.tag.Equals("Item") || col.gameObject.tag.Equals("PItems")){
             pick = false;
         }
+
     }
 
 
