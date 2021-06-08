@@ -12,8 +12,11 @@ public class PlayerMovement : MonoBehaviour
     private float playerSpeed = 5.0f, runningSpeed = 10f;
     private Vector2 moveInput = Vector2.zero;
 
+    public float[] lastPos;
 
+    
 
+    [SerializeField]
     private float timer = 0f, stc = 1;
     public float sps;
     [SerializeField]
@@ -21,6 +24,9 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField]
     private bool isStopped;
+
+    [SerializeField]
+    private float restTimer = 0, regenTimer;
    
    
     private PlayerCentral pCentral;
@@ -35,6 +41,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
+        lastPos = new float[2];
+
         rb = this.gameObject.GetComponent<Rigidbody2D>();
         pCentral = this.gameObject.GetComponent<PlayerCentral>();
     }
@@ -50,7 +58,7 @@ public class PlayerMovement : MonoBehaviour
     private void RunDone(){
         
         
-        if(pCentral.Stamina > 0){
+        if(pCentral.Stamina > 0 && timer > restTimer){
             isRunning = true;
             playerSpeed = runningSpeed;
         }
@@ -78,6 +86,28 @@ public class PlayerMovement : MonoBehaviour
 
     void Update(){
         timer += Time.deltaTime;
+
+        
+        if(pCentral.Stamina == 0){
+            restTimer = timer + 5;
+        }
+
+        if(timer > stc && isRunning && !isStopped){
+            stc = timer + sps;
+            pCentral.Stamina -= 0.5f;
+                if(pCentral.Stamina <= 0){
+                    RunFinish();
+                }
+        }
+
+        else if(!isRunning && pCentral.Stamina < 10){
+            if(timer > regenTimer){
+                regenTimer = timer + 3;
+                pCentral.Stamina += 0.5f;
+            }
+
+        }
+
     }
 
     void FixedUpdate()
@@ -92,17 +122,18 @@ public class PlayerMovement : MonoBehaviour
             isStopped = false;
         }
 
-
-        if(timer > stc && isRunning && isStopped == false){
-            stc = timer + sps;
-            pCentral.Stamina -= 0.5f;
-                if(pCentral.Stamina <= 0){
-                    RunFinish();
-                }
+        if(move.x != 0 && move.y == 0){
+            lastPos[0] = move.x;
+            lastPos[1] = 0;
         }
 
+        else if(move.y != 0 && move.x == 0){
+            lastPos[0] = 0;
+            lastPos[1] = move.y;
+        }
 
         rb.MovePosition(rb.position + move * playerSpeed * Time.deltaTime);
+
 
         
     }
