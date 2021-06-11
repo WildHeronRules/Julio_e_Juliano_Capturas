@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &6575775189682403088
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2440427733045967964, guid: 8fdabbf0b122a0240878ad396e2a997d, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2440427733045967964, guid: 8fdabbf0b122a0240878ad396e2a997d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2440427733045967964, guid: 8fdabbf0b122a0240878ad396e2a997d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2440427733045967964, guid: 8fdabbf0b122a0240878ad396e2a997d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2440427733045967964, guid: 8fdabbf0b122a0240878ad396e2a997d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2440427733045967964, guid: 8fdabbf0b122a0240878ad396e2a997d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2440427733045967964, guid: 8fdabbf0b122a0240878ad396e2a997d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2440427733045967964, guid: 8fdabbf0b122a0240878ad396e2a997d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2440427733045967964, guid: 8fdabbf0b122a0240878ad396e2a997d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2440427733045967964, guid: 8fdabbf0b122a0240878ad396e2a997d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2440427733045967964, guid: 8fdabbf0b122a0240878ad396e2a997d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2440427733045967965, guid: 8fdabbf0b122a0240878ad396e2a997d, type: 3}
+      propertyPath: m_Name
+      value: Player 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5742135910173267792, guid: 8fdabbf0b122a0240878ad396e2a997d, type: 3}
+      propertyPath: m_Actions
+      value: 
+      objectReference: {fileID: -944628639613478452, guid: d93687c92dc527e488cc121d5a782924, type: 3}
+    - target: {fileID: 5742135910173267792, guid: 8fdabbf0b122a0240878ad396e2a997d, type: 3}
+      propertyPath: m_DefaultActionMap
+      value: 658667ff-2be6-4bf2-8d29-ac020d1ff2b1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5742135910173267792, guid: 8fdabbf0b122a0240878ad396e2a997d, type: 3}
+      propertyPath: m_DefaultControlScheme
+      value: Gamepad
+      objectReference: {fileID: 0}
+    - target: {fileID: 5742135910173267792, guid: 8fdabbf0b122a0240878ad396e2a997d, type: 3}
+      propertyPath: m_ActionEvents.Array.size
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 5742135910173267792, guid: 8fdabbf0b122a0240878ad396e2a997d, type: 3}
+      propertyPath: m_ActionEvents.Array.data[12].m_ActionId
+      value: 6181112b-ed8e-448f-b496-152f1341ce08
+      objectReference: {fileID: 0}
+    - target: {fileID: 5742135910173267792, guid: 8fdabbf0b122a0240878ad396e2a997d, type: 3}
+      propertyPath: m_ActionEvents.Array.data[12].m_ActionName
+      value: "Player 2/Move[/\u0409  USB Gamepad          /hat,/\u0409  USB Gamepad         
+        /hat/down,/\u0409  USB Gamepad          /hat/left,/\u0409  USB Gamepad         
+        /hat/right]"
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8fdabbf0b122a0240878ad396e2a997d, type: 3}
