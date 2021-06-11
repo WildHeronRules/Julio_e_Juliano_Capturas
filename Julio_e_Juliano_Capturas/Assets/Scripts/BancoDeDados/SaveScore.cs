@@ -16,14 +16,14 @@ public class SaveScore : MonoBehaviour
 
     void Start()
     {
-        //pontuacao.text = "Você fez " + PlayerPrefs.GetInt("Pontuacao") + " pontos";
-        //pontos = PlayerPrefs.GetInt("Pontuacao");
+        pontuacao.text = "Você fez " + PlayerPrefs.GetInt("Pontuacao") + " pontos";
+        pontos = PlayerPrefs.GetInt("Pontuacao");
     }
 
     void Update()
     {
         jogador = nome.text;
-        //pontos = PlayerPrefs.GetInt("Pontuacao");
+        pontos = PlayerPrefs.GetInt("Pontuacao");
     }
 
     public void SalvarBtn()
@@ -34,7 +34,7 @@ public class SaveScore : MonoBehaviour
             status.text = "Registrando pontuacao";
             salvar.enabled = false;
             nome.enabled = false;
-            //PlayerPrefs.SetInt("Pontuacao", 0);
+            PlayerPrefs.SetInt("Pontuacao", 0);
         }
         else
         {

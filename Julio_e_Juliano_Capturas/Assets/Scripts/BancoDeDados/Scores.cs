@@ -30,7 +30,7 @@ public class Scores : MonoBehaviour
     IEnumerator listarJogadores()
     {
         WWWForm wwwf = new WWWForm();
-        wwwf.AddField("limite", 5);
+        wwwf.AddField("limite", 15);
 
         UnityWebRequest w = UnityWebRequest.Post("http://localhost/jejc_bd/listarJogadores.php", wwwf);
 
