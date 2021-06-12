@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
     private bool isStopped;
 
     [SerializeField]
-    private float restTimer, regenTimer = 3;
+    private float restTimer = 0, regenTimer;
    
    
     private PlayerCentral pCentral;

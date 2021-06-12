@@ -16,7 +16,7 @@ TagManager:
   - 
   - 
   - Player
-  - 9
+  - Obstacle
   - 
   - 
   - 
@@ -43,15 +43,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Background
-    uniqueID: 756940647
-    locked: 0
-  - name: Objects
-    uniqueID: 608196333
-    locked: 0
   - name: Player
     uniqueID: 2774242427
-    locked: 0
-  - name: Objects2
-    uniqueID: 2830255215
     locked: 0
