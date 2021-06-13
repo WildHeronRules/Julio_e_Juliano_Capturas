@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Item
   - PItems
+  - Light
   layers:
   - Default
   - TransparentFX
@@ -43,6 +44,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 355421003
+    locked: 0
+  - name: Objects
+    uniqueID: 1119809001
+    locked: 0
   - name: Player
     uniqueID: 2774242427
+    locked: 0
+  - name: Objects 2
+    uniqueID: 4157505567
     locked: 0
