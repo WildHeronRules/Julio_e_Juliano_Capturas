@@ -23,7 +23,6 @@ public class SaveScore : MonoBehaviour
     void Update()
     {
         jogador = nome.text;
-        pontos = PlayerPrefs.GetInt("Pontuacao");
     }
 
     public void SalvarBtn()

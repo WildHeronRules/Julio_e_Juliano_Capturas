@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Networking;
+using UnityEngine.SceneManagement;
 
 public class Scores : MonoBehaviour
 {
@@ -21,16 +22,15 @@ public class Scores : MonoBehaviour
 
     }
 
-    public void AtualizarLista()
+    public void VoltarBtn()
     {
 
-        StartCoroutine(listarJogadores());
     }
 
     IEnumerator listarJogadores()
     {
         WWWForm wwwf = new WWWForm();
-        wwwf.AddField("limite", 15);
+        wwwf.AddField("limite", 10);
 
         UnityWebRequest w = UnityWebRequest.Post("http://localhost/jejc_bd/listarJogadores.php", wwwf);
 
