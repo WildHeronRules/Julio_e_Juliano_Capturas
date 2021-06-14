@@ -27,6 +27,11 @@ public class Scores : MonoBehaviour
 
     }
 
+    public void AtualizarLista()
+    {
+        StartCoroutine(listarJogadores());
+    }
+
     IEnumerator listarJogadores()
     {
         WWWForm wwwf = new WWWForm();
