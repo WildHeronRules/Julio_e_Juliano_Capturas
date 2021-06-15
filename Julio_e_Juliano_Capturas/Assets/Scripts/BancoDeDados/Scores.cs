@@ -9,6 +9,7 @@ public class Scores : MonoBehaviour
 {
     public Text[] NomesJogadores;
     public Text[] PontosJogadores;
+    public float timeLeft = 10.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -19,17 +20,17 @@ public class Scores : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        timeLeft -= Time.deltaTime;
+        if(timeLeft <= 0.0f)
+        {
+            StartCoroutine(listarJogadores());
+            timeLeft = 7.0f;
+        }
     }
 
     public void VoltarBtn()
     {
 
-    }
-
-    public void AtualizarLista()
-    {
-        StartCoroutine(listarJogadores());
     }
 
     IEnumerator listarJogadores()
