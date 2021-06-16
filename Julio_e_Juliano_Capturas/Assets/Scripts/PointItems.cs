@@ -7,17 +7,5 @@ public class PointItems : MonoBehaviour
     // Start is called before the first frame update
 
     public int value;
-    
 
-
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

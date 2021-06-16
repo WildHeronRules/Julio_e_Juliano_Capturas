@@ -7,6 +7,9 @@ TagManager:
   - Item
   - PItems
   - Light
+  - Enemy
+  - Objects
+  - EnemyAttack
   layers:
   - Default
   - TransparentFX
@@ -55,4 +58,7 @@ TagManager:
     locked: 0
   - name: Objects 2
     uniqueID: 4157505567
+    locked: 0
+  - name: UI
+    uniqueID: 3537285817
     locked: 0
