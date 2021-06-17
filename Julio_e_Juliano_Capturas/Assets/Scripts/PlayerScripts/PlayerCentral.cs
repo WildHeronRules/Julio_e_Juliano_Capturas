@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerCentral : MonoBehaviour
 {
@@ -11,16 +12,23 @@ public class PlayerCentral : MonoBehaviour
     
 
     public Text staminaUI;
+    private EnemyCentral eCentral;
     
 
-    void Start()
+    void Awake()
     {
-        
+        eCentral = GameObject.Find("Enemy").GetComponent<EnemyCentral>();
     }
 
     // Update is called once per frame
     void Update()
     {
+       if(eCentral.eLife <= 0){
+           
+           SceneManager.LoadScene(3);
+
+       } 
+
        staminaUI.text = "Energia: " + Stamina;
     }
 }
